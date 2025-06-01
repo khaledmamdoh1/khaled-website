@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  background-color: #111;
+  text-align: center;
+}
+
+.hero {
+  background-image: url('https://images.unsplash.com/photo-1522199710521-72d69614c702?auto=format&fit=crop&w=1400&q=80');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+p {
+  font-size: 1.2rem;
+  margin: 10px 0 30px;
+}
+
+.button {
+  padding: 10px 25px;
+  background-color: #00c37e;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background-color: #00a76d;
+  color: #fff;
+}
+
+#contact {
+  padding: 60px 20px;
+  background-color: #1a1a1a;
+}
+#about {
+  background-color: #222;
+  padding: 60px 20px;
+}
+
+.about-text {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #ccc;
+}
+.button {
+  padding: 12px 30px;
+  background-color: #00c37e;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 30px;
+  transition: 0.3s;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.button:hover {
+  background-color: #00a76d;
+  color: #fff;
+}
