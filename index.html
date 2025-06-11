@@ -1,30 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- SEO Meta -->
-  <title>Khaled Mamdouh | Graphic Designer & Video Editor</title>
-  <meta name="description" content="Khaled Mamdouh is a freelance graphic designer and video editor. Explore branding, social media design, and short-form video editing." />
-  <meta name="keywords" content="Graphic Designer, Video Editor, Portfolio, Freelance, Khaled Mamdouh, Logo Design, Instagram Reels Editing" />
-  <meta name="author" content="Khaled Mamdouh" />
+  <title>Khaled Mamdouh | Graphic Designer & Video Editor Portfolio</title>
+  <meta name="description" content="Khaled Mamdouh is a freelance graphic designer and video editor. Explore creative projects in branding, social media design, and short-form video editing." />
 
-  <!-- Open Graph Tags -->
-  <meta property="og:title" content="Khaled Mamdouh | Portfolio" />
-  <meta property="og:description" content="Explore creative projects in branding, social media design, and video editing. Designed by Khaled Mamdouh." />
-  <meta property="og:image" content="https://khaledmamdoh1.github.io/khaled-website/imagesthumb1.jpg" />
-  <meta property="og:url" content="https://khaledmamdoh1.github.io/khaled-website/" />
-  <meta property="og:type" content="website" />
-
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
-
-  <!-- Lightbox2 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/css/lightbox.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-GP28Z8LECP"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -32,143 +18,47 @@
     gtag('js', new Date());
     gtag('config', 'G-GP28Z8LECP');
   </script>
+
+  <style>
+    .language-toggle {
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      background: #00c37e;
+      color: #000;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 9999;
+      transition: background 0.3s;
+    }
+    .language-toggle:hover { background: #00a56b; }
+  </style>
 </head>
 <body>
 
-  <header class="hero" role="banner">
+  <!-- زر تغيير اللغة -->
+  <button class="language-toggle" onclick="toggleLanguage()">AR</button>
+
+  <header class="hero">
     <div class="overlay">
-      <h1>Khaled Mamdouh</h1>
-      <p>Graphic Designer & Video Editor</p>
-      <a href="#contact" class="button">Contact Me</a>
-      <a href="#portfolio" class="button">See My Work</a>
+      <h1 id="hero-title">Khaled Mamdouh</h1>
+      <p id="hero-subtitle">Graphic Designer & Video Editor</p>
+      <a href="#contact" class="button" id="hero-contact">Contact Me</a>
     </div>
   </header>
 
   <main>
-    <section id="about" aria-labelledby="about-heading">
-      <h2 id="about-heading">About Me</h2>
-      <p>I’m Khaled Mamdouh, a passionate Graphic Designer and Video Editor with a sharp eye for detail and a love for clean, creative visuals. I help brands and creators bring their ideas to life through bold design and impactful storytelling.</p>
+    <section id="about">
+      <h2 id="about-title">About Me</h2>
+      <p id="about-text">I’m Khaled Mamdouh, a passionate Graphic Designer and Video Editor with a sharp eye for detail and a love for clean, creative visuals…</p>
     </section>
 
-    <section class="story-toggle" aria-label="Toggle my story">
-      <button onclick="toggleStory()" class="button">📖 Read My Story</button>
+    <section class="story-toggle">
+      <button onclick="toggleStory()" class="button" id="story-toggle">📖 Read My Story</button>
     </section>
 
-    <section id="my-story" style="display:none;" aria-labelledby="story-heading">
-      <h2 id="story-heading">My Story</h2>
-      <p>I didn't start with design—I started with video editing...</p>
-    </section>
-
-    <section id="skills" aria-labelledby="skills-heading">
-      <h2 id="skills-heading">Skills</h2>
-      <ul class="skills-list">
-        <li>Photoshop</li>
-        <li>Illustrator</li>
-        <li>Premiere Pro</li>
-        <li>Canva</li>
-        <li>CapCut</li>
-      </ul>
-    </section>
-
-    <section id="portfolio" aria-labelledby="portfolio-heading">
-      <h2 id="portfolio-heading">My Work</h2>
-      <div class="portfolio-gallery">
-        <article class="project">
-          <a href="thumb1.jpg" data-lightbox="portfolio" data-title="Logo Design – App X">
-            <img src="thumb1.jpg" alt="Logo Design – App X" loading="lazy">
-          </a>
-          <p class="project-title">Logo Design – App X</p>
-        </article>
-
-        <article class="project">
-          <a href="thumb2.jpg" data-lightbox="portfolio" data-title="Reel Thumbnail – Product Launch">
-            <img src="thumb2.jpg" alt="Reel Thumbnail – Product Launch" loading="lazy">
-          </a>
-          <p class="project-title">Reel Thumbnail – Product Launch</p>
-        </article>
-
-        <article class="project">
-          <a href="thumb3.jpg" data-lightbox="portfolio" data-title="Social Media Post – Café">
-            <img src="thumb3.jpg" alt="Social Media Post – Café" loading="lazy">
-          </a>
-          <p class="project-title">Social Media Post – Café</p>
-        </article>
-      </div>
-
-      <div class="view-more-buttons">
-        <a href="https://www.behance.net/3551cfed" target="_blank" class="button">🎨 View More Designs</a>
-        <a href="https://www.youtube.com/@Khaled--GD/shorts" target="_blank" class="button">🎥 View More Videos</a>
-      </div>
-    </section>
-
-    <section id="process" aria-labelledby="process-heading">
-      <h2 id="process-heading">My Creative Process</h2>
-      <div class="process-steps">
-        <article class="step">
-          <h3>1. Brief & Discussion</h3>
-          <p>We start by discussing your idea, goals, and vision for the project.</p>
-        </article>
-        <article class="step">
-          <h3>2. Research & Planning</h3>
-          <p>I dive into your brand or market to gather insights and build a direction.</p>
-        </article>
-        <article class="step">
-          <h3>3. Design & Draft</h3>
-          <p>Initial concepts are designed based on your needs—ready for your feedback.</p>
-        </article>
-        <article class="step">
-          <h3>4. Feedback & Revisions</h3>
-          <p>We refine the design together to make sure it fits your vision 100%.</p>
-        </article>
-        <article class="step">
-          <h3>5. Final Delivery</h3>
-          <p>You receive high-quality files in formats like JPG, PNG, MP4, or PDF ready to use.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="testimonials" aria-labelledby="testimonials-heading">
-      <h2 id="testimonials-heading">What Clients Say</h2>
-      <div class="testimonials-container">
-        <blockquote class="testimonial">
-          <p>"Khaled was fast, professional, and creative! He delivered exactly what I had in mind."</p>
-          <footer>— Sarah M. (USA)</footer>
-        </blockquote>
-        <blockquote class="testimonial">
-          <p>"The thumbnail Khaled designed increased our YouTube clicks by 35%! Highly recommended."</p>
-          <footer>— Omar F. (Egypt)</footer>
-        </blockquote>
-        <blockquote class="testimonial">
-          <p>"His attention to detail and ability to understand my brand made him my go-to designer."</p>
-          <footer>— Linda K. (UK)</footer>
-        </blockquote>
-      </div>
-      <div class="submit-feedback">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeSShVmdzJVcXBfmE3PHu9BH2AkMjA0DMDu3vm67nhzEKyuBw/viewform?usp=header" target="_blank" class="button">📝 Leave a Review</a>
-      </div>
-    </section>
-
-  </main>
-
-  <footer id="contact" role="contentinfo">
-    <h2>Let's Connect</h2>
-    <div class="social-links">
-      <a href="https://www.linkedin.com/in/khaled-mamdouh-ab1028361/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-      <a href="https://www.behance.net/3551cfed" target="_blank"><i class="fab fa-behance"></i> Behance</a>
-      <a href="https://www.instagram.com/5aled_gd/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
-      <a href="https://wa.me/201210174238" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-      <a href="mailto:5aleddoo7a559@gmail.com" target="_blank"><i class="fas fa-envelope"></i> Email</a>
-      <a href="khaled-cv.pdf" target="_blank" class="button">View CV</a>
-    </div>
-  </footer>
-
-  <!-- JS Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/js/lightbox.min.js"></script>
-  <script>
-    function toggleStory() {
-      const el = document.getElementById('my-story');
-      el.style.display = (el.style.display === 'none' ? 'block' : 'none');
-    }
-  </script>
-</body>
-</html>
+    <section id="my-story" style="display:none;">
+      <h2 id="story-title
