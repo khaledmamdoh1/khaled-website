@@ -5,6 +5,21 @@ body {
   color: #fff;
   background-color: #111;
   text-align: center;
+  scroll-behavior: smooth;
+  line-height: 1.6;
+}
+
+/* تحسين العرض في الشاشات الصغيرة */
+* {
+  box-sizing: border-box;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
 }
 
 /* خلفية البطل */
@@ -16,7 +31,6 @@ body {
   position: relative;
 }
 
-/* التعتيم والكتابة فوق الخلفية */
 .overlay {
   background-color: rgba(0, 0, 0, 0.6);
   height: 100%;
@@ -24,6 +38,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 0 20px;
+  text-align: center;
 }
 
 /* العناوين */
@@ -31,6 +47,18 @@ h1 {
   font-size: 3rem;
   margin: 0;
 }
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #00c37e;
+}
+
+h3 {
+  font-size: 1.3rem;
+  color: #00c37e;
+}
+
 /* الزرار الرئيسي */
 .button {
   padding: 12px 30px;
@@ -52,6 +80,8 @@ h1 {
   color: #000;
   box-shadow: 0 0 15px #00c37e80;
 }
+
+/* قسم المهارات */
 .skills-list li {
   background-color: #1e1e1e;
   margin: 10px 0;
@@ -73,6 +103,7 @@ h1 {
   box-shadow: 0 0 20px #00c37e88;
 }
 
+/* قسم البورتفوليو */
 #portfolio {
   background-color: #181818;
   padding: 60px 20px;
@@ -94,20 +125,9 @@ h1 {
   transition: 0.3s;
 }
 
-.portfolio-gallery img {
-  width: 100%;
-  height: auto;
-  display: block;
-  transition: 0.3s ease;
-}
-
 .portfolio-gallery a:hover img {
   transform: scale(1.05);
   box-shadow: 0 0 15px #00c37e99;
-}
-.project {
-  text-align: center;
-  max-width: 250px;
 }
 
 .project-title {
@@ -121,17 +141,18 @@ h1 {
   color: #00c37e;
   text-shadow: 0 0 5px #00c37e80;
 }
-.project video {
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 0 15px #00000055;
-  transition: 0.3s ease;
+
+.project {
+  text-align: center;
+  max-width: 250px;
 }
 
 .project video:hover {
   transform: scale(1.05);
   box-shadow: 0 0 15px #00c37e99;
 }
+
+/* زرار عرض المزيد */
 .view-more-buttons {
   display: flex;
   justify-content: center;
@@ -140,62 +161,19 @@ h1 {
   flex-wrap: wrap;
 }
 
-.view-more-buttons .button {
-  background: none;
-  border: 2px solid #00c37e;
-  color: #00c37e;
-  font-weight: bold;
-  font-size: 1rem;
-  padding: 12px 25px;
-  border-radius: 30px;
-  transition: all 0.3s ease;
-  text-decoration: none;
-}
-
 .view-more-buttons .button:hover {
   background-color: #00c37e;
   color: #000;
   box-shadow: 0 0 15px #00c37e80;
 }
-#my-story {
-  background-color: #1a1a1a;
-  padding: 60px 20px;
-}
 
-.story-text {
-  max-width: 800px;
-  margin: 0 auto;
-  line-height: 1.8;
-  font-size: 1.1rem;
-  color: #ccc;
-  text-align: left;
-  transition: 0.4s ease;
-}
-
-#my-story h2 {
-  text-align: center;
-  margin-bottom: 30px;
-  font-size: 2rem;
-  color: #00c37e;
-}
-.story-toggle {
-  text-align: center;
-  margin-top: 40px;
-}
-
+/* قصتي */
 #my-story {
   background-color: #1a1a1a;
   padding: 60px 20px;
   margin-top: 30px;
 }
 
-#my-story h2 {
-  text-align: center;
-  margin-bottom: 30px;
-  font-size: 2rem;
-  color: #00c37e;
-}
-
 .story-text {
   max-width: 800px;
   margin: 0 auto;
@@ -205,16 +183,17 @@ h1 {
   text-align: left;
   transition: 0.4s ease;
 }
+
+.story-toggle {
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* الشهادات */
 #testimonials {
   background-color: #111;
   padding: 60px 20px;
   text-align: center;
-}
-
-#testimonials h2 {
-  color: #00c37e;
-  margin-bottom: 40px;
-  font-size: 2rem;
 }
 
 .testimonials-container {
@@ -248,16 +227,12 @@ h1 {
   color: #00c37e;
   font-size: 0.9rem;
 }
+
+/* خطوات العمل */
 #process {
   background-color: #181818;
   padding: 60px 20px;
   text-align: center;
-}
-
-#process h2 {
-  color: #00c37e;
-  margin-bottom: 40px;
-  font-size: 2rem;
 }
 
 .process-steps {
@@ -281,25 +256,15 @@ h1 {
   box-shadow: 0 0 15px #00c37e55;
 }
 
-.step h3 {
-  color: #00c37e;
-  margin-bottom: 10px;
-}
-
 .step p {
   color: #ccc;
-  line-height: 1.6;
 }
+
+/* الأسئلة الشائعة */
 #faq {
   background-color: #111;
   padding: 60px 20px;
   text-align: center;
-}
-
-#faq h2 {
-  color: #00c37e;
-  margin-bottom: 40px;
-  font-size: 2rem;
 }
 
 .faq-list {
@@ -322,12 +287,6 @@ h1 {
   box-shadow: 0 0 10px #00c37e40;
 }
 
-.faq-item h4 {
-  color: #00c37e;
-  margin-bottom: 10px;
-}
-
 .faq-item p {
   color: #ccc;
-  line-height: 1.6;
 }
