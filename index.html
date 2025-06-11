@@ -1,102 +1,86 @@
-
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>موقعي الشخصي</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Khaled Portfolio</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    .language-switcher {
-      position: fixed;
-      top: 15px;
-      left: 20px;
-      z-index: 999;
-    }
-
-    .language-switcher button {
-      background-color: #00c37e;
-      border: none;
-      color: black;
-      padding: 8px 14px;
-      border-radius: 20px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    .language-switcher button:hover {
-      background-color: #00a86b;
-    }
-  </style>
 </head>
 <body>
-  <div class="language-switcher">
-    <button onclick="toggleLanguage()">EN</button>
+
+  <!-- زر تغيير اللغة -->
+  <div style="position: fixed; top: 20px; left: 20px; z-index: 1000;">
+    <a href="arabic.html" class="button" style="padding: 8px 20px; font-size: 0.9rem;">العربية</a>
   </div>
 
+  <!-- قسم الهيرو -->
   <section class="hero">
     <div class="overlay">
-      <h1 data-ar="مرحبًا، أنا خالد" data-en="Hello, I'm Khaled">مرحبًا، أنا خالد</h1>
-      <a href="#portfolio" class="button" data-ar="شاهد أعمالي" data-en="View My Work">شاهد أعمالي</a>
+      <h1>Hi, I'm Khaled</h1>
+      <a href="#portfolio" class="button">View My Work</a>
     </div>
   </section>
 
-  <section id="portfolio">
-    <h2 data-ar="أعمالي" data-en="Portfolio">أعمالي</h2>
-    <div class="portfolio-gallery">
-      <div class="project">
-        <img src="https://via.placeholder.com/250x150" />
-        <div class="project-title" data-ar="مشروع 1" data-en="Project 1">مشروع 1</div>
-      </div>
-      <div class="project">
-        <video src="" controls></video>
-        <div class="project-title" data-ar="مشروع 2" data-en="Project 2">مشروع 2</div>
-      </div>
-    </div>
-  </section>
-
+  <!-- عني -->
   <section id="my-story">
-    <h2 data-ar="قصتي" data-en="My Story">قصتي</h2>
-    <p class="story-text" data-ar="أنا مصمم جرافيك ومحرر فيديو." data-en="I'm a graphic designer and video editor.">
-      أنا مصمم جرافيك ومحرر فيديو.
-    </p>
+    <h2>My Story</h2>
+    <div class="story-text">
+      <p>I’m a passionate Graphic Designer and Video Editor with a strong focus on modern aesthetics and engaging visuals. I help brands communicate through creative visuals that leave a lasting impression.</p>
+    </div>
   </section>
 
+  <!-- المعرض -->
+  <section id="portfolio">
+    <h2>Portfolio</h2>
+    <div class="portfolio-gallery">
+      <a href="#"><img src="https://via.placeholder.com/300x200" alt="Project 1"></a>
+      <a href="#"><img src="https://via.placeholder.com/300x200" alt="Project 2"></a>
+      <a href="#"><img src="https://via.placeholder.com/300x200" alt="Project 3"></a>
+    </div>
+  </section>
+
+  <!-- مراحل العمل -->
+  <section id="process">
+    <h2>My Process</h2>
+    <div class="process-steps">
+      <div class="step">
+        <h3>1. Brief</h3>
+        <p>Understanding the client's needs and vision.</p>
+      </div>
+      <div class="step">
+        <h3>2. Design</h3>
+        <p>Creating initial concepts and refining them.</p>
+      </div>
+      <div class="step">
+        <h3>3. Deliver</h3>
+        <p>Finalizing and delivering the product.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- تقييم العملاء -->
   <section id="testimonials">
-    <h2 data-ar="آراء العملاء" data-en="Testimonials">آراء العملاء</h2>
+    <h2>Testimonials</h2>
     <div class="testimonials-container">
       <div class="testimonial">
-        <p data-ar="خدمة ممتازة!" data-en="Excellent service!">خدمة ممتازة!</p>
-        <h4 data-ar="عميل 1" data-en="Client 1">عميل 1</h4>
+        <p>"Khaled delivered top-quality work beyond expectations!"</p>
+        <h4>- Client A</h4>
+      </div>
+      <div class="testimonial">
+        <p>"Highly professional and creative designer."</p>
+        <h4>- Client B</h4>
       </div>
     </div>
   </section>
 
+  <!-- الأسئلة الشائعة -->
   <section id="faq">
-    <h2 data-ar="الأسئلة الشائعة" data-en="FAQs">الأسئلة الشائعة</h2>
+    <h2>FAQ</h2>
     <div class="faq-list">
       <div class="faq-item">
-        <h4 data-ar="ما هي خدماتك؟" data-en="What services do you offer?">ما هي خدماتك؟</h4>
-        <p data-ar="تصميم جرافيك، تحرير فيديو، والمزيد." data-en="Graphic design, video editing, and more.">تصميم جرافيك، تحرير فيديو، والمزيد.</p>
+        <h4>How can I contact you?</h4>
+        <p>You can reach me via LinkedIn or the contact form on my site.</p>
       </div>
-    </div>
-  </section>
-
-  <script>
-    function toggleLanguage() {
-      const html = document.documentElement;
-      const currentLang = html.getAttribute("lang");
-      const newLang = currentLang === "ar" ? "en" : "ar";
-      const newDir = newLang === "ar" ? "rtl" : "ltr";
-
-      html.setAttribute("lang", newLang);
-      html.setAttribute("dir", newDir);
-      document.querySelector(".language-switcher button").innerText = newLang === "ar" ? "EN" : "AR";
-
-      document.querySelectorAll("[data-ar]").forEach((el) => {
-        el.textContent = newLang === "ar" ? el.getAttribute("data-ar") : el.getAttribute("data-en");
-      });
-    }
-  </script>
-</body>
-</html>
+      <div class="faq-item">
+        <h4>What tools do you use?</h4>
+        <p>Adobe Photoshop, Illustrator, Premiere Pro, and After Ef
